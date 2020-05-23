@@ -144,17 +144,11 @@ $(function() {
 
 	var categories = window.cats = new CategoriesCollection([
 		{
-			name: 'Territory Areas',
+			name: 'Territorios',
 			icon: 'General/wall-breach.png',
 			type: 'General',
 			enabled: true
 		},
-		{
-			name: 'Neutral Zones',
-			icon: 'General/wall-breach.png',
-			type: 'General',
-			enabled: true
-		}
 	]);
 	var showingLabels;
 	var CategoriesView = Backbone.View.extend({
@@ -183,7 +177,8 @@ $(function() {
 				models = locations.where({ type: type });
 				allLocations = locations.filter(function(loc) { return loc.get('marker').visible !== false });
 				
-			if(type == "labels" && showLocations){
+			if(type == "
+			   " && showLocations){
 				Vent.trigger('labels:visible', allLocations);
 				showingLabels = true;
 			}else if(type == "labels"){
